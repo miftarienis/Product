@@ -1,11 +1,9 @@
 package com.example.product.controller;
 
 import com.example.product.pojo.Products;
-import com.example.product.repository.ProductsRepository;
+import com.example.product.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -13,22 +11,28 @@ import java.util.List;
 public class ProductController {
 
     @Autowired
-    private ProductsRepository productsRepository;
+    private ProductService productService;
 
     @GetMapping("/products")
     public List<Products> getAllProducts() {
-        return productsRepository.findAll();
+        return productService.findAll();
     }
 
-    @PostMapping("/products")
-    public Products addProducts(){
+    @PostMapping("/product")
+    public Products addProduct(@RequestParam Integer id,@RequestParam String model, @RequestParam String description){
         Products products = new Products();
-        products.setTitle("Dji Mavic 5");
-        products.setId(3);
-        products.setDescription("Better then the other ones");
+        products.setId(id);
+        products.setTitle(model);
+        products.setDescription(description);
 
-
-        return productsRepository.save(products);
+        return productService.addProduct(products);
     }
+
+    @DeleteMapping("/product/{id}")
+    public String deleteProductById(@PathVariable Integer id){
+        return productService.delete(id);
+    }
+
 
 }
+
