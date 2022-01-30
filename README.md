@@ -30,6 +30,6 @@ spring.datasource.username=root
 spring.jpa.database-platform=org.hibernate.dialect.MySqlDialect
 ```
 
-##Usage
+## Usage
 
 Start your apache than run the project and head out yo your localhost.
