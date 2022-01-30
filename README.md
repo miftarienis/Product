@@ -32,4 +32,4 @@ spring.jpa.database-platform=org.hibernate.dialect.MySqlDialect
 
 ## Usage
 
-Start your apache than run the project and head out yo your localhost.
+Start your apache than run the project and head out to your localhost.
