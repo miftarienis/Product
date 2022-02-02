@@ -1,4 +1,4 @@
-# Product Menagement System
+# Product Management System
 
 Product Management System is a system where you can manage the products by adding or deleting them.
 
