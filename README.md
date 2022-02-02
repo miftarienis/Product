@@ -1,6 +1,6 @@
 # Product Menagement System
 
-Product Menagement System is a system where you can manage the products by adding or deleting them.
+Product Management System is a system where you can manage the products by adding or deleting them.
 
 ## What's inside
 
