@@ -32,6 +32,9 @@ public class Products {
         this.location_id = location_id;
     }
 
+    public Products(Integer id, String title, String description) {
+    }
+
     public Integer getId() {
         return id;
     }
