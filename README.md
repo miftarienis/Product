@@ -1,6 +1,7 @@
 # Product Management System
 
 Product Management System is a system where you can manage the products by adding or deleting them.
+Also in the system the buyer will have the options to see the locations of the products.
 
 ## What's inside
 
